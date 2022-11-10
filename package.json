@@ -19,7 +19,6 @@
     "proxy",
     "heroku"
   ],
-  "main": "./lib/cors-anywhere.js",
   "files": [
     "lib/",
     "test/",
@@ -41,7 +40,8 @@
     "supertest": "^2.0.1"
   },
   "scripts": {
-    "lint": "eslint .",
+    "start": "node ./lib/cors-anywhere.js",
+    "lint": "eslint ./lib/cors-anywhere.js",
     "test": "mocha ./test/test*.js --reporter spec",
     "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec"
   },
